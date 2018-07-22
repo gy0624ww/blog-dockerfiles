@@ -14,9 +14,9 @@ RUN apk upgrade --no-cache --update \
     && echo ${TZ} > /etc/timezone \
     && rm -rf /var/cache/apk/*
 
- ADD entrypoint.sh /entrypoint.sh #容易报错
+COPY entrypoint.sh /entrypoint.sh #容易报错
 # ADD flush /usr/local/bin/flush #容易报错
 
 WORKDIR /usr/share/nginx/html
 
- CMD ["/entrypoint.sh"] #容易报错
+CMD ["/entrypoint.sh"] #容易报错
