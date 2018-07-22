@@ -9,7 +9,7 @@ ENV TZ ${TZ}
 RUN apk upgrade --update \
     && apk add bash git \
     && rm -rf /usr/share/nginx/html \
-    && git clone https://github.com/gy0624ww/huxpro.github.io.git /usr/share/nginx/html \
+    && git clone https://github.com/gy0624ww/guanyue_blog /usr/share/nginx/html \
     && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
     && echo ${TZ} > /etc/timezone \
     && rm -rf /var/cache/apk/*
