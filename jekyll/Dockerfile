@@ -16,7 +16,7 @@ RUN apk upgrade --no-cache --update \
 
 #COPY ./entrypoint.sh / #容易报错
 ADD entrypoint.sh /entrypoint.sh
-ADD flush /usr/local/bin/flush #容易报错
+#ADD flush /usr/local/bin/flush #容易报错
 
 WORKDIR /usr/share/nginx/html
 
